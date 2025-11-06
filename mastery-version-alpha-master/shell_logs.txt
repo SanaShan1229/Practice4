@@ -1,0 +1,500 @@
+   20  make clean
+   21  make
+   22  python3 driver.py 
+   23  make
+   24  python3 driver.py 
+   25  git add .
+   26  git commit -m "Checkpoint: splitting works, no coalescing yet"
+   27  git push origin main
+   28  make debug
+   29  make clean
+   30  python3 driver.py
+   31  make debug
+   32  make clean
+   33  python3 driver.py
+   34  make clean
+   35  python3 driver.py
+   36  make clean
+   37  python3 driver.py
+   38  make debug
+   39  make debug
+   40  python3 driver.py
+   41  python3 driver.py
+   42  make runner
+   43  make clean
+   44  python3 driver.py
+   45  git checkout main
+   46  git fetch origin
+   47  git reset --hard origin/main
+   48  make clean
+   49  python3 driver.py
+   50  make clean
+   51  python3 driver.py
+   52  make clean
+   53  python3 driver.py
+   54  make debug
+   55  python3 driver.py
+   56  make clean
+   57  make
+   58  python3 driver.py
+   59  make clean
+   60  make
+   61  python3 driver.py
+   62  make clean
+   63  make
+   64  python3 driver.py
+   65  make clean
+   66  make
+   67  python3 driver.py
+   68  make clean
+   69  make
+   70  python3 driver.py
+   71  make clean
+   72  make 
+   73  python3 driver.py
+   74  make clean
+   75  make
+   76  python3 driver.py
+   77  python3 driver.py -w1
+   78  python3 driver.py
+   79  ./runner
+   80  ./runner -rc traces/week2/amptjp-bal.rep
+   81  ./runner -rc traces/week2/basic/amptjp-bal.rep
+   82  make clean
+   83  make CFLAGS="-g -O0"
+   84  gdb --args ./mdriver -v
+   85  gdb --args ./runner -rc traces/week2/basic/amptjp-bal.rep
+   86  make clean
+   87  make CFLAGS="-g -O0"
+   88  ls -l ./runner
+   89  gdb --args ./runner -rc traces/week2/basic/amptjp-bal.rep
+   90  gdb --args ./runner -rc traces/week2/basic/amptjp-bal.rep
+   91  make clean
+   92  make CFLAGS="-g -O0"
+   93  ./runner -rc traces/week2/basic/amptjp-bal.rep 2> debug.log
+   94  tail -n 200 debug.log > last200.tx
+   95  sed -n '1,200p' last200.txt
+   96  sed -n '1,200p' last200.tx
+   97  gdb ./runner
+   98  make
+   99  make clean
+  100  python3 driver.py
+  101  python3 driver.py
+  102  make
+  103  make clean
+  104  python3 driver.py
+  105  make
+  106  make clean
+  107  python3 driver.py
+  108  ./runner -f traces/short1.rep -c
+  109  ./runner -rc traces/week1/short1-bal.rep
+  110  ./runner -rc traces/week2/basic/amptjp-bal.rep
+  111  gdb ./runner
+  112  gdb ./runner
+  113  gdb ./runner
+  114  make
+  115  make clean
+  116  gdb ./runner
+  117  gdb ./runner
+  118  gdb ./runner
+  119  cd ~/mm-lab-SanaShan1229
+  120  gdb ./runner
+  121  gdb ./runner
+  122  make clean
+  123  make debug
+  124  ./runner -rc traces/week2/basic/amptjp-bal.rep
+  125  (gdb) run -rc traces/week2/basic/amptjp-bal.rep
+  126  gdb ./runner
+  127  make clean
+  128  make debug
+  129  gdb ./runner
+  130  make clean
+  131  make debug
+  132  gdb ./runner
+  133  make clean
+  134  make debug
+  135  gdb ./runner
+  136  make clean
+  137  make debug
+  138  gdb ./runner
+  139  make clean
+  140  make
+  141  make
+  142  make clean
+  143  make
+  144  python3 driver.py
+  145  git add .
+  146  git commit -m "Fixed to address sorted"
+  147  git push origin main
+  148  make all
+  149  make 
+  150  python3 driver.py
+  151  make all
+  152  make
+  153  python3 driver.py
+  154  make
+  155  python3 driver.py
+  156  make
+  157  python3 driver.py
+  158  git add .
+  159  git commit -m "first fit not best fit"
+  160  git push origin main
+  161  make
+  162  python3 driver.py
+  163  make all
+  164  python3 driver.py
+  165  make clean
+  166  make ./bump_test
+  167  gdb ./bump_test
+  168  make clean
+  169  make ./bump_test
+  170  run
+  171  make clean
+  172  make debug
+  173  ./bump_test
+  174  make clean
+  175  make debug
+  176  ./bump_test -v
+  177  gdb ./bump_test
+  178  make debug
+  179  make debug
+  180  gdb runner
+  181  make clean
+  182  make debug
+  183  gdb runner
+  184  make clean
+  185  make runner
+  186  ./runner -rc traces/week2/basic/random2.rep
+  187  make clean
+  188  make debug
+  189  ./runner -rc traces/week2/basic/random2.rep
+  190  gdb runner
+  191  make clean
+  192  make debug
+  193  gdb runner
+  194  gdb runner
+  195  make clean
+  196  make debug
+  197  gdb runner
+  198  make clean
+  199  make debug
+  200  gdb runner
+  201  make debug
+  202  make clean
+  203  break coalesce
+  204  break coalesce
+  205  break coalesce
+  206  list
+  207  run -rc traces/week2/basic/random2.rep
+  208  run -rc traces/week2/basic/random2.rep
+  209  make debug
+  210  debug runner
+  211  gdb runner
+  212  make clean
+  213  make debug
+  214  gdb runner
+  215  make debug
+  216  make make clean
+  217  gdb runner
+  218  make clean
+  219  make runner
+  220  make debug
+  221  gdb runner
+  222  make debug
+  223  gdb ./runner
+  224  make debug
+  225  make ./runner
+  226  gdb ./runner
+  227  make debug
+  228  gdb ./runner
+  229  gdb ./runner
+  230  make debug
+  231  make clean
+  232  gdb ./runner
+  233  y
+  234  cd ~/mm-lab-SanaShan1229
+  235  ls
+  236  make clean
+  237  make debug
+  238  gdb ./runner
+  239  make clean
+  240  make debug
+  241  gdb ./runner
+  242  make clean
+  243  make debug
+  244  make clean
+  245  make debug
+  246  gdb ./runner
+  247  make clean
+  248  make debug
+  249  make clean
+  250  gdb ./runner
+  251  gdb ./runner
+  252  make clean
+  253  make debug
+  254  gdb ./runner
+  255  make debug
+  256  gdb ./runner
+  257  make debug
+  258  gdb ./runner
+  259  make debug
+  260  gdb ./runner
+  261  make debug
+  262  gdb ./runner
+  263  make debug
+  264  gdb ./runner
+  265  make debug
+  266  make ./runner
+  267  gdb ./runner
+  268  make debug
+  269  gdb ./runner
+  270  makedebug
+  271  gdb ./runner
+  272  make debug
+  273  gdb ./runner
+  274  make debug
+  275  gdb ./runner
+  276  quit
+  277  q
+  278  make debug
+  279  make debug
+  280  gdb ./runner
+  281  make debug
+  282  gdb ./runner
+  283  ./runner -c traces/short1-bal.rep
+  284  ./runner -c traces/week1/short1-bal.rep
+  285  ./runner -rc traces/week1/short1-bal.rep
+  286  make clean
+  287  make debug
+  288  python3 driver.py
+  289  git add .
+  290  git commit -m "final"
+  291  git push origin main
+  292  make
+  293  make clean
+  294  make
+  295  python3 driver.py
+  296  make clean
+  297  make
+  298  python3 driver.py
+  299  make all
+  300  make
+  301  make clean
+  302  make
+  303  python3 driver.py
+  304  make clean
+  305  make 
+  306  make clean
+  307  make
+  308  make clean
+  309  make
+  310  python3 driver.py
+  311  git add .
+  312  git commit -m "actual final"
+  313  git push origin main
+  314  git add .
+  315  git commit -m "actually done"
+  316  git push origin main
+  317  git clone EXEC = $(BIN_DIR)/orderlo
+  318  git clone https://github.com/CS429-FA2025/shared-repo-version-a-SanaShan1229.git
+  319  .
+  320  ls
+  321  make
+  322  cat Makefile
+  323  ./runner
+  324  ./runner -r short1.rep
+  325  ./runner -r traces/week1/short2.rep
+  326  gdb ./runner
+  327  make
+  328  gdb bin/orderlogs
+  329  git add .
+  330  git commit -m "done"
+  331  rm -f 
+  332  cd ..
+  333  rm -rf shared
+  334  rm -rf shared-repo-version-a-SanaShan1229/
+  335  git clone https://github.com/CS429-FA2025/ac-lab-SanaShan1229.git
+  336  git clone git@github.com:CS429-FA2025/se-lab-sanchana-and-jeanette.git
+  337  make week1
+  338  make week1
+  339  ./bin/test-hw
+  340  ./bin/test-hw
+  341  make week1
+  342  ./bin/test-hw
+  343  make week1
+  344  ./bin/test-hw
+  345  make week1
+  346  ./bin/test-hw
+  347  make week1
+  348  ./bin/test-hw
+  349  make week1
+  350  ./bin/test-hw
+  351  make clean
+  352  make CFLAGS="-g -O0" week1
+  353  gdb ./bin/test-hw
+  354  gdb ./bin/test-hw
+  355  gdb ./bin/test-hw
+  356  make week1
+  357  ./bin/test-hw
+  358  git add .
+  359  git commit -m "failing 16 test cases and still need to do the extra credit"
+  360  git push origin main
+  361  make raptor
+  362  ls
+  363  cd f2025e1-a-master
+  364  make raptor
+  365  make trex
+  366  make trex
+  367  make raptor
+  368  make trike
+  369  gdb bin/orderlogs
+  370  make spinosaurus
+  371  make trike
+  372  gdb bin/orderlogs
+  373  make trike
+  374  gdb bin/orderlogs
+  375  make stego
+  376  chmod +x ref_order
+  377  make stego
+  378  make trike
+  379  gdb bin/orderlogs
+  380  make trike
+  381  make spinosaurus
+  382  make trex
+  383  make raptor
+  384  make make spinosaurus
+  385  make spinosaurus
+  386  make trex
+  387  make stego
+  388  make trike
+  389  gdb bin/orderlogs
+  390  make spinosaurus
+  391  make trex
+  392  make trike
+  393  gdb bin/orderlogs
+  394  make trike
+  395  make spinosaurus
+  396  make trike
+  397  gdb bin/orderlogs
+  398  make spinosaurus
+  399  make stego
+  400  history
+  401  history > shell_logs.txt
+  402  git status
+  403  git add .
+  404  git commid -m "done"
+  405  git commit -m "done"
+  406  git push
+  407  git push
+  408  cd ..
+  409  rm -rf f2025e1-a-master
+  410  git clone git@github.com:SanaShan1229/Practice.git
+  411  cd Practice
+  412  code .
+  413  cd f2025e1-b-master
+  414  make trex
+  415  make trex
+  416  make raptor
+  417  make stego
+  418  run -f testcases/tiny
+  419  ./bin/orderlogs -f testcases/tiny
+  420  make trike
+  421  gdb bin/orderlogs
+  422  make spinosaurus
+  423  make trike
+  424  gdb bin/orderlogs
+  425  make spinsaurus
+  426  make spinosaurus
+  427  make trike
+  428  gdb
+  429  make spinosaurus
+  430  make trike
+  431  gdb bin/outputlogs
+  432  make spinosaurus
+  433  make trike
+  434  gdb bin/orderlogs
+  435  make spinosaurus
+  436  make trex
+  437  ake stego
+  438  make stego
+  439  chmod +x ./ref_order
+  440  make stego
+  441  make spinosaurus
+  442  make trike
+  443  gdb bin/orderlogs
+  444  make trex
+  445  make stego
+  446  history > shell_logs.txt
+  447  git status
+  448  git add .
+  449  git commit -m "done"
+  450  git push
+  451  cd ..
+  452  rm -rf f2025e1-b-master
+  453  git clone git@github.com:SanaShan1229/Prac2.git
+  454  code .
+  455  cd Prac2
+  456  code .
+  457  git clone git@github.com:SanaShan1229/Practice.git
+  458  make check
+  459  cd mastery-version-a-master
+  460  make check
+  461  chmod +x ./mini_ci_reference
+  462  make check
+  463  touch ~/.gdbinit
+  464  echo "set history save on" >> ~/.gdbinit
+  465  cat ~gdbinit
+  466  make tests
+  467  make check
+  468  make clean
+  469  make debug
+  470  gdb mini_ci
+  471  make clean
+  472  make check
+  473  make clean
+  474  make debug
+  475  gdb mini_ci
+  476  make clean
+  477  make tests
+  478  make check
+  479  make clean
+  480  make debug
+  481  gdb mini_ci
+  482  make clean
+  483  make check
+  484  make clean
+  485  make debug
+  486  gdb mini_ci
+  487  make clean
+  488  make check
+  489  history
+  490  history > log.txt
+  491  git status
+  492  git add .
+  493  git commit -m "done"
+  494  git push
+  495  cd ..
+  496  rm -rf mastery-version-a-master
+  497  git clone git@github.com:SanaShan1229/Practice3.git
+  498  cd Practice3
+  499  code .
+  500  make stitch
+  501  cd mastery-version-alpha-master
+  502  make nani
+  503  chmod +x trie_ref
+  504  make nani
+  505  make clean
+  506  make pleakley
+  507  make clean
+  508  clean cobra
+  509  make cobra
+  510  make lilo
+  511  gdb bin/second_trie
+  512  make clean
+  513  make cobra
+  514  make stitch
+  515  make nani
+  516  make stitch
+  517  make pleakley
+  518  make nani
+  519  history > shell_logs.txt
